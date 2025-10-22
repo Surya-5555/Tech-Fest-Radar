@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code, Cpu, Zap } from "lucide-react"
 
@@ -22,7 +21,6 @@ const quotes = [
 
 export function HeroSection() {
   const [currentQuote, setCurrentQuote] = useState(0)
-  const router = useRouter()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -58,7 +56,7 @@ export function HeroSection() {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="gap-2 " onClick={() => router.push('/#upcoming-events')}>
+            <Button size="lg" className="gap-2 ">
               Explore Events
               <ArrowRight className="h-4 w-4" />
             </Button>
